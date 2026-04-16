@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
@@ -34,8 +35,36 @@ const Index = () => {
     }
   };
 
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springX = useSpring(mouseX, { stiffness: 50, damping: 20, mass: 0.5 });
+  const springY = useSpring(mouseY, { stiffness: 50, damping: 20, mass: 0.5 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [mouseX, mouseY]);
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      {/* Global Interactive Mouse Follower */}
+      <motion.div
+        className="pointer-events-none fixed top-0 left-0 w-[500px] h-[500px] rounded-full mix-blend-screen z-0 opacity-60 dark:opacity-30 hidden md:block"
+        style={{
+          x: springX,
+          y: springY,
+          translateX: "-50%",
+          translateY: "-50%",
+          background: "radial-gradient(circle, hsl(var(--brand-orange) / 0.5) 0%, transparent 70%)",
+        }}
+      />
+      
       <Header isDark={isDark} toggleDarkMode={toggleDarkMode} />
       <main>
         <HeroSection />
