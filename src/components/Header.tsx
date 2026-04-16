@@ -41,7 +41,7 @@ export const Header = ({ isDark, toggleDarkMode }: HeaderProps) => {
             <img 
               src={isDark ? "/lovable-uploads/3190bd35-ca13-432f-bf28-f86c245d7cf5.png" : "/lovable-uploads/0d76c7b6-2643-47e3-9f6b-cdc4815848eb.png"}
               alt="DevHelp Logo"
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
