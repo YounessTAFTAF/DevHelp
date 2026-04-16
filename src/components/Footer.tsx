@@ -25,7 +25,7 @@ export const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center text-sm">
                 <Mail className="w-4 h-4 mr-2 text-primary" />
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=devhelpagency.it@gmail.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">
+                <a href="mailto:devhelpagency.it@gmail.com" className="text-muted-foreground hover:text-primary smooth-transition">
                   devhelpagency.it@gmail.com
                 </a>
               </div>

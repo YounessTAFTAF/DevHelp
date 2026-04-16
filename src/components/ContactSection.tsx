@@ -135,7 +135,7 @@ export const ContactSection = () => {
                     <Mail className="w-5 h-5 text-primary mr-3" />
                     <div>
                       <div className="font-medium">{t('contact.info.email')}</div>
-                      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=devhelpagency.it@gmail.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">
+                      <a href="mailto:devhelpagency.it@gmail.com" className="text-muted-foreground hover:text-primary smooth-transition">
                         devhelpagency.it@gmail.com
                       </a>
                     </div>
@@ -171,7 +171,7 @@ export const ContactSection = () => {
                     <Phone className="w-4 h-4 mr-3" />
                     {t('contact.actions.call')}
                   </Button>
-                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=devhelpagency.it@gmail.com&su=Project Inquiry', '_blank')}>
+                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={() => window.location.href = 'mailto:devhelpagency.it@gmail.com?subject=Project Inquiry'}>
                     <Mail className="w-4 h-4 mr-3" />
                     {t('contact.actions.email')}
                   </Button>
@@ -184,7 +184,7 @@ export const ContactSection = () => {
                 <p className="text-sm opacity-90 mb-4">
                   {t('contact.ready.subtitle')}
                 </p>
-                <Button variant="secondary" className="bg-white text-black hover:bg-gray-100 smooth-transition font-semibold" onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=devhelpagency.it@gmail.com&su=Let\'s Accelerate Growth', '_blank')}>
+                <Button variant="secondary" className="bg-white text-black hover:bg-gray-100 smooth-transition font-semibold" onClick={() => window.location.href = 'mailto:devhelpagency.it@gmail.com?subject=Let\'s Accelerate Growth'}>
                   {t('contact.ready.button')}
                 </Button>
               </div>
