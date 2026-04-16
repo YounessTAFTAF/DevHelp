@@ -56,7 +56,7 @@ const Index = () => {
     <div className="min-h-screen bg-background relative overflow-hidden">
       {/* Global Interactive Mouse Follower */}
       <motion.div
-        className="pointer-events-none fixed top-0 left-0 w-[500px] h-[500px] rounded-full dark:mix-blend-screen z-0 opacity-20 dark:opacity-30 hidden md:block"
+        className="pointer-events-none fixed top-0 left-0 w-[500px] h-[500px] rounded-full dark:mix-blend-screen z-0 opacity-50 dark:opacity-30 hidden md:block"
         style={{
           x: springX,
           y: springY,
