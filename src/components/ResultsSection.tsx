@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { TrendingUp, Users, Zap, Target, Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -67,7 +68,13 @@ export const ResultsSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
               {t('results.title1')}
               <br />
@@ -76,37 +83,61 @@ export const ResultsSection = () => {
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               {t('results.subtitle')}
             </p>
-          </div>
+          </motion.div>
 
           {/* Stats Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {stats.map((stat, index) => (
-              <Card 
-                key={index} 
-                className="text-center group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/80 backdrop-blur-sm"
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex h-full"
               >
-                <CardContent className="p-6">
-                  <div className="mb-4 flex justify-center">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 smooth-transition">
-                      <stat.icon className="w-6 h-6 text-primary" />
+              <Card 
+                className="w-full text-center group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/80 backdrop-blur-sm"
+              >
+                <CardContent className="p-6 flex flex-col justify-between h-full">
+                  <div>
+                    <div className="mb-4 flex justify-center">
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 smooth-transition">
+                        <stat.icon className="w-6 h-6 text-primary" />
+                      </div>
                     </div>
+                    <div className="text-3xl font-bold text-primary mb-2">{stat.number}</div>
+                    <div className="font-semibold mb-2">{stat.label}</div>
                   </div>
-                  <div className="text-3xl font-bold text-primary mb-2">{stat.number}</div>
-                  <div className="font-semibold mb-2">{stat.label}</div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{stat.description}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mt-2">{stat.description}</p>
                 </CardContent>
               </Card>
+              </motion.div>
             ))}
           </div>
 
           {/* Case Studies */}
           <div className="mb-16">
-            <h3 className="text-2xl md:text-3xl font-bold text-center mb-12">{t('results.caseStudies.title')}</h3>
+            <motion.h3 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-2xl md:text-3xl font-bold text-center mb-12"
+            >
+              {t('results.caseStudies.title')}
+            </motion.h3>
             <div className="grid lg:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex h-full"
+                >
                 <Card 
-                  key={index} 
-                  className="group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/90 backdrop-blur-sm"
+                  className="w-full group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/90 backdrop-blur-sm"
                 >
                   <CardContent className="p-6">
                     <div className="mb-4">
@@ -130,12 +161,19 @@ export const ResultsSection = () => {
                     </ul>
                   </CardContent>
                 </Card>
+                </motion.div>
               ))}
             </div>
           </div>
 
           {/* Team Section */}
-          <div className="bg-card border border-border/50 rounded-2xl p-8 lg:p-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
+            className="bg-card border border-border/50 rounded-2xl p-8 lg:p-12"
+          >
             {/* Testimonial Quote */}
             <div className="text-center mb-10">
               <div className="flex justify-center gap-1 mb-4">
@@ -167,7 +205,7 @@ export const ResultsSection = () => {
                 <div className="text-sm text-muted-foreground">{t('results.team.person2.title')}</div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

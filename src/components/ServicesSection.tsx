@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Code, Globe, Zap, Rocket, BarChart3, Smartphone } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -63,21 +64,34 @@ export const ServicesSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
               {t('services.title')} <span className="text-primary">{t('services.titleHighlight')}</span> {t('services.titleEnd')}
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               {t('services.subtitle')}
             </p>
-          </div>
+          </motion.div>
 
           {/* Services Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex h-full"
+              >
               <Card 
-                key={index} 
-                className="group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/90 backdrop-blur-sm overflow-hidden"
+                className="w-full group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/90 backdrop-blur-sm overflow-hidden"
               >
                 <CardHeader className="pb-4">
                   <div className="mb-4">
@@ -103,11 +117,18 @@ export const ServicesSection = () => {
                   </ul>
                 </CardContent>
               </Card>
+              </motion.div>
             ))}
           </div>
 
           {/* CTA Section */}
-          <div className="text-center">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center"
+          >
             <div className="bg-gradient-primary rounded-2xl p-8 lg:p-12 text-white">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 {t('services.cta.title')}
@@ -124,7 +145,7 @@ export const ServicesSection = () => {
                 {t('services.cta.button')}
               </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, Calendar } from "lucide-react";
@@ -12,18 +13,31 @@ export const PacksSection = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-[500px] bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16 max-w-3xl mx-auto"
+        >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
             {t('packs.title1')}
             <span className="text-primary">{t('packs.title2')}</span>
           </h2>
           {/* Orange Separator line as requested */}
           <hr className="w-24 h-1 bg-primary mx-auto border-0 rounded-full" />
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* BUSINESS PACK */}
-          <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-glow smooth-transition flex flex-col relative z-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="flex h-full"
+          >
+            <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-glow smooth-transition w-full flex flex-col relative z-20">
             <CardHeader className="text-center pb-8 border-b border-border/50">
               <CardTitle className="text-2xl font-bold text-foreground mb-4">
                 {t('packs.pack1.name')}
@@ -55,9 +69,17 @@ export const PacksSection = () => {
               </Button>
             </CardFooter>
           </Card>
+          </motion.div>
 
           {/* PACK PREMIUM */}
-          <Card className="border-primary/50 relative bg-card/80 backdrop-blur-sm shadow-glow smooth-transition flex flex-col md:-translate-y-4 z-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex h-full"
+          >
+            <Card className="border-primary/50 w-full relative bg-card/80 backdrop-blur-sm shadow-glow smooth-transition flex flex-col md:-translate-y-4 z-20">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs font-bold tracking-wide shadow-glow">
               MOST POPULAR
             </div>
@@ -92,6 +114,7 @@ export const PacksSection = () => {
               </Button>
             </CardFooter>
           </Card>
+          </motion.div>
         </div>
       </div>
     </section>

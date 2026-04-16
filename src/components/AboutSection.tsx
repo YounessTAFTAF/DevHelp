@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { TrendingUp, Target, Lightbulb, Rocket } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -33,7 +34,13 @@ export const AboutSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
               {t('about.title1')}
               <br />
@@ -42,30 +49,46 @@ export const AboutSection = () => {
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               {t('about.subtitle')}
             </p>
-          </div>
+          </motion.div>
 
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {features.map((feature, index) => (
-              <Card 
-                key={index} 
-                className="group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/80 backdrop-blur-sm"
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex h-full"
               >
-                <CardContent className="p-6 text-center">
-                  <div className="mb-4 flex justify-center">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 smooth-transition">
-                      <feature.icon className="w-6 h-6 text-primary" />
+              <Card 
+                className="w-full group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/80 backdrop-blur-sm"
+              >
+                <CardContent className="p-6 text-center h-full flex flex-col justify-between">
+                  <div>
+                    <div className="mb-4 flex justify-center">
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 smooth-transition">
+                        <feature.icon className="w-6 h-6 text-primary" />
+                      </div>
                     </div>
+                    <h3 className="font-semibold text-lg mb-3">{feature.title}</h3>
                   </div>
-                  <h3 className="font-semibold text-lg mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed mt-2">{feature.description}</p>
                 </CardContent>
               </Card>
+              </motion.div>
             ))}
           </div>
 
           {/* Story Section */}
-          <div className="bg-card border border-border/50 rounded-2xl p-8 lg:p-12">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
+            className="bg-card border border-border/50 rounded-2xl p-8 lg:p-12"
+          >
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
@@ -82,11 +105,11 @@ export const AboutSection = () => {
                 <img 
                   src="/lovable-uploads/70f04660-923c-41b9-b8fb-e630759e214e.png"
                   alt="Digital Marketing Agency - DevHelp Growth Accelerator"
-                  className="w-full h-auto rounded-2xl shadow-elevation"
+                  className="w-full h-auto rounded-2xl shadow-elevation hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

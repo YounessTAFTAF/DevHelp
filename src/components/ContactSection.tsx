@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -43,7 +44,13 @@ export const ContactSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
               {t('contact.title1')}
               <br />
@@ -52,11 +59,17 @@ export const ContactSection = () => {
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               {t('contact.subtitle')}
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="border-border/50 bg-card/90 backdrop-blur-sm">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+            >
+            <Card className="border-border/50 bg-card/90 backdrop-blur-sm h-full">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold flex items-center">
                   <Send className="w-6 h-6 mr-3 text-primary" />
@@ -101,9 +114,16 @@ export const ContactSection = () => {
                 </form>
               </CardContent>
             </Card>
+            </motion.div>
 
             {/* Contact Information */}
-            <div className="space-y-6">
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="space-y-6"
+            >
               {/* Contact Details */}
               <Card className="border-border/50 bg-card/90 backdrop-blur-sm">
                 <CardHeader>
@@ -167,7 +187,8 @@ export const ContactSection = () => {
                   {t('contact.ready.button')}
                 </Button>
               </div>
-            </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
