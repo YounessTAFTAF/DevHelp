@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useEffect, MouseEvent as ReactMouseEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Rocket } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -13,8 +14,35 @@ export const HeroSection = () => {
     }
   };
 
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springX = useSpring(mouseX, { stiffness: 50, damping: 20, mass: 0.5 });
+  const springY = useSpring(mouseY, { stiffness: 50, damping: 20, mass: 0.5 });
+
+  const handleMouseMove = (e: ReactMouseEvent<HTMLElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    mouseX.set(e.clientX - rect.left);
+    mouseY.set(e.clientY - rect.top);
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
+    <section 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient"
+      onMouseMove={handleMouseMove}
+    >
+      {/* Interactive Mouse Follower */}
+      <motion.div
+        className="pointer-events-none absolute top-0 left-0 w-[500px] h-[500px] rounded-full mix-blend-screen z-0 opacity-60 dark:opacity-30 hidden md:block"
+        style={{
+          x: springX,
+          y: springY,
+          translateX: "-50%",
+          translateY: "-50%",
+          background: "radial-gradient(circle, hsl(var(--brand-orange) / 0.5) 0%, transparent 70%)",
+        }}
+      />
+
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary rounded-full blur-3xl animate-pulse"></div>
