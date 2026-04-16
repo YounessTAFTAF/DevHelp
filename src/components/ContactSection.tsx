@@ -187,7 +187,6 @@ export const ContactSection = () => {
                   {t('contact.ready.button')}
                 </Button>
               </div>
-              </div>
             </motion.div>
           </div>
         </div>
