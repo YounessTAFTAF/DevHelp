@@ -141,6 +141,21 @@ const translations = {
     'results.team.person2.name': 'Youness TAFTAF',
     'results.team.person2.title': 'Co-Founder, DevHelp',
 
+    // FAQ Section
+    'faq.title1': 'Frequently Asked',
+    'faq.title2': 'Questions',
+    'faq.subtitle': 'Everything you need to know about our services, pricing, and how we can accelerate your growth.',
+    'faq.q1': 'What does a "Growth Accelerator" mean?',
+    'faq.a1': 'We don\'t just build websites; we create digital ecosystems designed to convert, scale, and accelerate your business growth through strategic design and development.',
+    'faq.q2': 'How long does it take to build a website?',
+    'faq.a2': 'Depending on the complexity, our Business Pack usually takes 1-2 weeks to launch, while a Premium Pack can take 3-4 weeks from initial strategy to final deployment.',
+    'faq.q3': 'Do you provide ongoing support after the launch?',
+    'faq.a3': 'Yes! Our Premium Pack includes 60 days of dedicated support and maintenance to ensure everything runs perfectly smoothly while you scale your business.',
+    'faq.q4': 'Can you help us if we already have a website?',
+    'faq.a4': 'Absolutely. We perform a complete digital audit to identify bottlenecks, and then rebuild or optimize your current platform for significantly better performance and conversions.',
+    'faq.q5': 'Do you handle the hosting and domain name?',
+    'faq.a5': 'Yes, both of our packs include a free .com or .ma domain and fast, secure cloud hosting for the entire first year.',
+
     // Contact Section
     'contact.title1': 'Let\'s Build the',
     'contact.title2': 'Future Together',
@@ -318,6 +333,21 @@ const translations = {
     'results.team.person2.name': 'Youness TAFTAF',
     'results.team.person2.title': 'Co-Fondateur, DevHelp',
     
+    // FAQ Section
+    'faq.title1': 'Questions',
+    'faq.title2': 'Fréquentes',
+    'faq.subtitle': 'Tout ce que vous devez savoir sur nos services, nos tarifs et comment nous pouvons accélérer votre croissance.',
+    'faq.q1': 'Que signifie un "Accélérateur de Croissance" ?',
+    'faq.a1': 'Nous ne créons pas seulement des sites web ; nous créons des écosystèmes numériques conçus pour convertir, évoluer et accélérer la croissance de votre entreprise grâce au design stratégique.',
+    'faq.q2': 'Combien de temps faut-il pour créer un site web ?',
+    'faq.a2': 'Selon la complexité, notre Pack Business prend généralement 1 à 2 semaines, tandis qu\'un Pack Premium peut prendre 3 à 4 semaines de la stratégie initiale au lancement.',
+    'faq.q3': 'Fournissez-vous un support continu après le lancement ?',
+    'faq.a3': 'Oui ! Notre Pack Premium comprend 60 jours de support et de maintenance dédiés pour garantir que tout fonctionne parfaitement pendant que vous développez votre entreprise.',
+    'faq.q4': 'Pouvez-vous nous aider si nous avons déjà un site web ?',
+    'faq.a4': 'Absolument. Nous effectuons un audit numérique complet pour identifier les problèmes, puis nous reconstruisons ou optimisons votre plateforme actuelle pour de meilleures conversions.',
+    'faq.q5': 'Gérez-vous l\'hébergement et le nom de domaine ?',
+    'faq.a5': 'Oui, nos deux packs incluent un domaine .com ou .ma gratuit et un hébergement cloud rapide et sécurisé pour toute la première année.',
+
     // Contact Section
     'contact.title1': 'Construisons l\'',
     'contact.title2': 'Avenir Ensemble',
@@ -495,6 +525,21 @@ const translations = {
     'results.team.person2.name': 'يونس تفتاف',
     'results.team.person2.title': 'المؤسس المشارك، DevHelp',
     
+    // FAQ Section
+    'faq.title1': 'الأسئلة',
+    'faq.title2': 'الشائعة',
+    'faq.subtitle': 'كل ما تحتاج لمعرفته حول خدماتنا وأسعارنا وكيف يمكننا تسريع نموك.',
+    'faq.q1': 'ماذا يعني "مُسرِّع النمو"؟',
+    'faq.a1': 'نحن لا نبني مواقع الويب فحسب؛ بل ننشئ أنظمة رقمية مصممة للتحويل والتوسع وتسريع نمو عملك من خلال التصميم والتطوير الاستراتيجي.',
+    'faq.q2': 'كم يستغرق بناء موقع ويب؟',
+    'faq.a2': 'اعتمادًا على التعقيد، تستغرق باقة الأعمال عادةً أسبوعًا إلى أسبوعين، بينما تستغرق الباقة المميزة 3-4 أسابيع من الاستراتيجية الأولية حتى الإطلاق النهائي.',
+    'faq.q3': 'هل تقدمون الدعم المستمر بعد الإطلاق؟',
+    'faq.a3': 'نعم! تتضمن باقتنا المميزة 60 يومًا من الدعم والصيانة المخصصة لضمان سير كل شيء بسلاسة تامة.',
+    'faq.q4': 'هل يمكنكم مساعدتنا إذا كان لدينا موقع بالفعل؟',
+    'faq.a4': 'بالتأكيد. نقوم بإجراء تدقيق رقمي كامل لتحديد العقبات، ثم نقوم بإعادة بناء أو تحسين منصتك الحالية لزيادة الأداء والتحويلات بشكل كبير.',
+    'faq.q5': 'هل تتولون إدارة الاستضافة واسم النطاق؟',
+    'faq.a5': 'نعم، تتضمن كلتا باقتينا نطاق .com أو .ma مجانيًا واستضافة سحابية سريعة وآمنة للعام الأول بأكمله.',
+
     // Contact Section
     'contact.title1': 'لنبني',
     'contact.title2': 'المستقبل معاً',
