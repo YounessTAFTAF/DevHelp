@@ -13,11 +13,11 @@ export const PacksSection = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-[500px] bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
+          <motion.div 
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 20 }}
           className="text-center mb-16 max-w-3xl mx-auto"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
@@ -31,10 +31,10 @@ export const PacksSection = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* BUSINESS PACK */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.1, type: "spring", stiffness: 100, damping: 15 }}
             className="flex h-full"
           >
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-glow smooth-transition w-full flex flex-col relative z-20">
@@ -73,10 +73,10 @@ export const PacksSection = () => {
 
           {/* PACK PREMIUM */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.2, type: "spring", stiffness: 100, damping: 15 }}
             className="flex h-full"
           >
             <Card className="border-primary/50 w-full relative bg-card/80 backdrop-blur-sm shadow-glow smooth-transition flex flex-col md:-translate-y-4 z-20">

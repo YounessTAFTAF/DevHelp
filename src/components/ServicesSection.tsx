@@ -65,10 +65,10 @@ export const ServicesSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 20 }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -84,10 +84,10 @@ export const ServicesSection = () => {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1, type: "spring", stiffness: 100, damping: 15 }}
                 className="flex h-full"
               >
               <Card 

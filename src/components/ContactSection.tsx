@@ -45,10 +45,10 @@ export const ContactSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 20 }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -64,10 +64,10 @@ export const ContactSection = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -30, scale: 0.95 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5, type: "spring", stiffness: 100, damping: 20 }}
             >
             <Card className="border-border/50 bg-card/90 backdrop-blur-sm h-full">
               <CardHeader>
@@ -118,10 +118,10 @@ export const ContactSection = () => {
 
             {/* Contact Information */}
             <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 30, scale: 0.95 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.2, type: "spring", stiffness: 100, damping: 20 }}
               className="space-y-6"
             >
               {/* Contact Details */}
