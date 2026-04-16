@@ -71,7 +71,7 @@ export const ServicesSection = () => {
             transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 20 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 light-mode-title-glow">
               {t('services.title')} <span className="text-primary">{t('services.titleHighlight')}</span> {t('services.titleEnd')}
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -91,7 +91,7 @@ export const ServicesSection = () => {
                 className="flex h-full"
               >
               <Card 
-                className="w-full group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/90 backdrop-blur-sm overflow-hidden"
+                className="w-full group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/90 backdrop-blur-sm overflow-hidden light-mode-card-glow"
               >
                 <CardHeader className="pb-4">
                   <div className="mb-4">

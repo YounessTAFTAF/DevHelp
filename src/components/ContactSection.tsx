@@ -51,7 +51,7 @@ export const ContactSection = () => {
             transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 20 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 light-mode-title-glow">
               {t('contact.title1')}
               <br />
               <span className="text-primary">{t('contact.title2')}</span>
@@ -69,7 +69,7 @@ export const ContactSection = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, type: "spring", stiffness: 100, damping: 20 }}
             >
-            <Card className="border-border/50 bg-card/90 backdrop-blur-sm h-full">
+            <Card className="border-border/50 bg-card/90 backdrop-blur-sm h-full light-mode-card-glow">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold flex items-center">
                   <Send className="w-6 h-6 mr-3 text-primary" />
@@ -125,7 +125,7 @@ export const ContactSection = () => {
               className="space-y-6"
             >
               {/* Contact Details */}
-              <Card className="border-border/50 bg-card/90 backdrop-blur-sm">
+              <Card className="border-border/50 bg-card/90 backdrop-blur-sm light-mode-card-glow">
                 <CardHeader>
                   <CardTitle className="text-xl font-bold">{t('contact.info.title')}</CardTitle>
                 </CardHeader>
@@ -157,7 +157,7 @@ export const ContactSection = () => {
               </Card>
 
               {/* Quick Actions */}
-              <Card className="border-border/50 bg-card/90 backdrop-blur-sm">
+              <Card className="border-border/50 bg-card/90 backdrop-blur-sm light-mode-card-glow">
                 <CardHeader>
                   <CardTitle className="text-xl font-bold">{t('contact.quickActions')}</CardTitle>
                 </CardHeader>

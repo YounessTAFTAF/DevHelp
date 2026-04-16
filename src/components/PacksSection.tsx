@@ -20,7 +20,7 @@ export const PacksSection = () => {
             transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 20 }}
           className="text-center mb-16 max-w-3xl mx-auto"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight light-mode-title-glow">
             {t('packs.title1')}
             <span className="text-primary">{t('packs.title2')}</span>
           </h2>
@@ -37,7 +37,7 @@ export const PacksSection = () => {
             transition={{ duration: 0.5, delay: 0.1, type: "spring", stiffness: 100, damping: 15 }}
             className="flex h-full"
           >
-            <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-glow smooth-transition w-full flex flex-col relative z-20">
+            <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-glow smooth-transition w-full flex flex-col relative z-20 light-mode-card-glow">
             <CardHeader className="text-center pb-8 border-b border-border/50">
               <CardTitle className="text-2xl font-bold text-foreground mb-4">
                 {t('packs.pack1.name')}
@@ -79,7 +79,7 @@ export const PacksSection = () => {
             transition={{ duration: 0.5, delay: 0.2, type: "spring", stiffness: 100, damping: 15 }}
             className="flex h-full"
           >
-            <Card className="border-primary/50 w-full relative bg-card/80 backdrop-blur-sm shadow-glow smooth-transition flex flex-col md:-translate-y-4 z-20">
+            <Card className="border-primary/50 w-full relative bg-card/80 backdrop-blur-sm shadow-glow smooth-transition flex flex-col md:-translate-y-4 z-20 light-mode-card-glow">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs font-bold tracking-wide shadow-glow">
               MOST POPULAR
             </div>

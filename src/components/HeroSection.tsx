@@ -46,7 +46,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 light-mode-title-glow"
           >
             {t('hero.title1')} <span className="text-primary">{t('hero.title2')}</span> —
             <br />

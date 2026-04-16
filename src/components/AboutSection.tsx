@@ -41,7 +41,7 @@ export const AboutSection = () => {
             transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 20 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 light-mode-title-glow">
               {t('about.title1')}
               <br />
               <span className="text-primary">{t('about.title2')}</span>
@@ -63,7 +63,7 @@ export const AboutSection = () => {
                 className="flex h-full"
               >
               <Card 
-                className="w-full group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/80 backdrop-blur-sm"
+                className="w-full group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/80 backdrop-blur-sm light-mode-card-glow"
               >
                 <CardContent className="p-6 text-center h-full flex flex-col justify-between">
                   <div>
@@ -91,7 +91,7 @@ export const AboutSection = () => {
           >
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-primary light-mode-title-glow">
                   {t('about.story.title')}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">

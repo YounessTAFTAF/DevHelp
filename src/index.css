@@ -138,4 +138,18 @@
   .bounce-transition {
     transition: var(--transition-bounce);
   }
+
+  .light-mode-card-glow {
+    box-shadow: 0 0 50px hsl(var(--brand-orange) / 0.15);
+  }
+  .dark .light-mode-card-glow {
+    box-shadow: none; /* Assuming they only want this in light mode or they already have dark mode styles */
+  }
+
+  .light-mode-title-glow {
+    text-shadow: 0 0 30px hsl(var(--brand-orange) / 0.25);
+  }
+  .dark .light-mode-title-glow {
+    text-shadow: none;
+  }
 }

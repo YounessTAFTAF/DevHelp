@@ -75,7 +75,7 @@ export const ResultsSection = () => {
             transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 20 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 light-mode-title-glow">
               {t('results.title1')}
               <br />
               <span className="text-primary">{t('results.title2')}</span>
@@ -97,7 +97,7 @@ export const ResultsSection = () => {
                 className="flex h-full"
               >
               <Card 
-                className="w-full text-center group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/80 backdrop-blur-sm"
+                className="w-full text-center group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/80 backdrop-blur-sm light-mode-card-glow"
               >
                 <CardContent className="p-6 flex flex-col justify-between h-full">
                   <div>
@@ -123,7 +123,7 @@ export const ResultsSection = () => {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 20 }}
-              className="text-2xl md:text-3xl font-bold text-center mb-12"
+              className="text-2xl md:text-3xl font-bold text-center mb-12 light-mode-title-glow"
             >
               {t('results.caseStudies.title')}
             </motion.h3>
@@ -138,7 +138,7 @@ export const ResultsSection = () => {
                   className="flex h-full"
                 >
                 <Card 
-                  className="w-full group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/90 backdrop-blur-sm"
+                  className="w-full group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/90 backdrop-blur-sm light-mode-card-glow"
                 >
                   <CardContent className="p-6">
                     <div className="mb-4">
