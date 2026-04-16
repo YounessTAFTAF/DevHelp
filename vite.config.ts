@@ -21,5 +21,14 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          motion: ['framer-motion'],
+          ui: ['@radix-ui/react-accordion', '@radix-ui/react-dialog', 'lucide-react']
+        }
+      }
+    }
   },
 }));
