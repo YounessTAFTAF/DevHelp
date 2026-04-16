@@ -1,10 +1,46 @@
-import { motion } from "framer-motion";
+import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
+import { useEffect, useRef } from "react";
 import { TrendingUp, Users, Zap, Target, Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import mouadImg from "@/assets/youness.jpeg";
 import younessImg from "@/assets/mouad.webp";
+
+const AnimatedCounter = ({ value }: { value: string }) => {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  
+  const match = value.match(/^(\D*)(\d+)(\D*)$/);
+  const prefix = match ? match[1] : "";
+  const targetNumber = match ? parseInt(match[2], 10) : 0;
+  const suffix = match ? match[3] : "";
+  
+  const motionValue = useMotionValue(0);
+  const springValue = useSpring(motionValue, {
+    stiffness: 50,
+    damping: 20,
+  });
+
+  useEffect(() => {
+    if (isInView && match) {
+      motionValue.set(targetNumber);
+    }
+  }, [isInView, motionValue, targetNumber, match]);
+
+  useEffect(() => {
+    if (!match) return;
+    return springValue.on("change", (latest) => {
+      if (ref.current) {
+        ref.current.textContent = `${prefix}${Math.floor(latest)}${suffix}`;
+      }
+    });
+  }, [springValue, prefix, suffix, match]);
+
+  if (!match) return <span>{value}</span>;
+
+  return <span ref={ref}>{prefix}0{suffix}</span>;
+};
 
 export const ResultsSection = () => {
   const { t } = useLanguage();
@@ -106,7 +142,9 @@ export const ResultsSection = () => {
                         <stat.icon className="w-6 h-6 text-primary" />
                       </div>
                     </div>
-                    <div className="text-3xl font-bold text-primary mb-2">{stat.number}</div>
+                    <div className="text-3xl font-bold text-primary mb-2">
+                      <AnimatedCounter value={stat.number} />
+                    </div>
                     <div className="font-semibold mb-2">{stat.label}</div>
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed mt-2">{stat.description}</p>
