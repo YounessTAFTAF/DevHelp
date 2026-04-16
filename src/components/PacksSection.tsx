@@ -35,9 +35,9 @@ export const PacksSection = () => {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5, delay: 0.1, type: "spring", stiffness: 100, damping: 15 }}
-            className="flex h-full"
+            className="flex h-full will-change-transform"
           >
-            <Card className="border-border/50 bg-card/50 backdrop-blur-sm hover:shadow-glow smooth-transition w-full flex flex-col relative z-20 light-mode-card-glow">
+            <Card className="border-border/50 bg-card/95 hover:shadow-glow smooth-transition w-full flex flex-col relative z-20 light-mode-card-glow">
             <CardHeader className="text-center pb-8 border-b border-border/50">
               <CardTitle className="text-2xl font-bold text-foreground mb-4">
                 {t('packs.pack1.name')}
@@ -77,9 +77,9 @@ export const PacksSection = () => {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5, delay: 0.2, type: "spring", stiffness: 100, damping: 15 }}
-            className="flex h-full"
+            className="flex h-full will-change-transform"
           >
-            <Card className="border-primary/50 w-full relative bg-card/80 backdrop-blur-sm shadow-glow smooth-transition flex flex-col md:-translate-y-4 z-20 light-mode-card-glow">
+            <Card className="border-primary/50 w-full relative bg-card/95 shadow-glow smooth-transition flex flex-col md:-translate-y-4 z-20 light-mode-card-glow">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs font-bold tracking-wide shadow-glow">
               MOST POPULAR
             </div>

@@ -60,10 +60,10 @@ export const AboutSection = () => {
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1, type: "spring", stiffness: 100, damping: 15 }}
-                className="flex h-full"
+                className="flex h-full will-change-transform"
               >
               <Card 
-                className="w-full group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/80 backdrop-blur-sm light-mode-card-glow"
+                className="w-full group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/95 light-mode-card-glow"
               >
                 <CardContent className="p-6 text-center h-full flex flex-col justify-between">
                   <div>

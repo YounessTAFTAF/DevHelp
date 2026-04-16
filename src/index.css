@@ -140,7 +140,7 @@
   }
 
   .light-mode-card-glow {
-    box-shadow: 0 0 50px hsl(var(--brand-orange) / 0.15);
+    box-shadow: 0 0 30px hsl(var(--brand-orange) / 0.15);
   }
   .dark .light-mode-card-glow {
     box-shadow: none; /* Assuming they only want this in light mode or they already have dark mode styles */
