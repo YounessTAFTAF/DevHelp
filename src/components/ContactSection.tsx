@@ -40,7 +40,8 @@ export const ContactSection = () => {
       [e.target.name]: e.target.value
     });
   };
-  return <section id="contact" className="py-20 lg:py-32 bg-secondary/30">
+  return (
+    <section id="contact" className="py-20 lg:py-32 bg-secondary/30">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -192,5 +193,6 @@ export const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
