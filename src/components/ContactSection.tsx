@@ -185,7 +185,7 @@ export const ContactSection = () => {
                 <p className="text-sm opacity-90 mb-4">
                   {t('contact.ready.subtitle')}
                 </p>
-                <Button variant="secondary" className="bg-white text-black hover:bg-gray-100 smooth-transition font-semibold" onClick={() => window.location.href = 'mailto:devhelpagency.it@gmail.com?subject=Let\'s Accelerate Growth'}>
+                <Button variant="secondary" className="bg-white text-black hover:bg-gray-100 smooth-transition font-semibold" onClick={() => window.location.href = "mailto:devhelpagency.it@gmail.com?subject=Let's Accelerate Growth"}>
                   {t('contact.ready.button')}
                 </Button>
               </div>
