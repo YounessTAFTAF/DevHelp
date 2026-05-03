@@ -48,6 +48,22 @@ export const ContactSection = () => {
       budget: ''
     });
   };
+
+  const handleEmailClick = (e: React.MouseEvent, subject: string = "Project Inquiry") => {
+    e.preventDefault();
+    const email = 'devhelp.agency@gmail.com';
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}`;
+    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+    
+    // Check if it's a mobile device
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      window.location.href = mailtoUrl;
+    } else {
+      window.open(gmailUrl, '_blank');
+    }
+  };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -150,7 +166,11 @@ export const ContactSection = () => {
                     <Mail className="w-5 h-5 text-primary mr-3" />
                     <div>
                       <div className="font-medium">{t('contact.info.email')}</div>
-                      <a href="mailto:devhelp.agency@gmail.com" className="text-muted-foreground hover:text-primary smooth-transition">
+                      <a 
+                        href="mailto:devhelp.agency@gmail.com" 
+                        onClick={(e) => handleEmailClick(e)}
+                        className="text-muted-foreground hover:text-primary smooth-transition"
+                      >
                         devhelp.agency@gmail.com
                       </a>
                     </div>
@@ -193,7 +213,7 @@ export const ContactSection = () => {
                     <Phone className="w-4 h-4 mr-3" />
                     {t('contact.actions.call')}
                   </Button>
-                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={() => window.location.href = 'mailto:devhelp.agency@gmail.com?subject=Project Inquiry'}>
+                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={(e) => handleEmailClick(e, "Project Inquiry")}>
                     <Mail className="w-4 h-4 mr-3 text-primary" />
                     {t('contact.actions.email')}
                   </Button>
@@ -206,7 +226,7 @@ export const ContactSection = () => {
                 <p className="text-sm opacity-90 mb-4">
                   {t('contact.ready.subtitle')}
                 </p>
-                <Button variant="secondary" className="bg-white text-black hover:bg-gray-100 smooth-transition font-semibold" onClick={() => window.location.href = "mailto:devhelp.agency@gmail.com?subject=Let's Start Today"}>
+                <Button variant="secondary" className="bg-white text-black hover:bg-gray-100 smooth-transition font-semibold" onClick={(e) => handleEmailClick(e, "Let's Start Today")}>
                   {t('contact.ready.button')}
                 </Button>
               </div>

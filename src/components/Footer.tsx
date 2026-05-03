@@ -26,7 +26,19 @@ export const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center text-sm">
                 <Mail className="w-4 h-4 mr-2 text-primary" />
-                <a href="mailto:devhelp.agency@gmail.com" className="text-muted-foreground hover:text-primary smooth-transition">
+                <a 
+                  href="mailto:devhelp.agency@gmail.com" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                    if (isMobile) {
+                      window.location.href = "mailto:devhelp.agency@gmail.com";
+                    } else {
+                      window.open("https://mail.google.com/mail/?view=cm&fs=1&to=devhelp.agency@gmail.com", "_blank");
+                    }
+                  }}
+                  className="text-muted-foreground hover:text-primary smooth-transition"
+                >
                   devhelp.agency@gmail.com
                 </a>
               </div>
