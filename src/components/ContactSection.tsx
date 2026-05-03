@@ -150,7 +150,7 @@ export const ContactSection = () => {
                     <Mail className="w-5 h-5 text-primary mr-3" />
                     <div>
                       <div className="font-medium">{t('contact.info.email')}</div>
-                      <a href="https://wa.me/212726551805" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">
+                      <a href="mailto:devhelp.agency@gmail.com" className="text-muted-foreground hover:text-primary smooth-transition">
                         devhelp.agency@gmail.com
                       </a>
                     </div>
@@ -189,11 +189,11 @@ export const ContactSection = () => {
                     <Calendar className="w-4 h-4 mr-3 text-primary" />
                     {t('contact.actions.book')}
                   </Button>
-                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={() => window.open('https://wa.me/212726551805', '_blank')}>
+                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={() => window.location.href = 'tel:+212726551805'}>
                     <Phone className="w-4 h-4 mr-3" />
                     {t('contact.actions.call')}
                   </Button>
-                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={() => window.open('https://wa.me/212726551805?text=Hi!%20I%20have%20a%20question%20about%20a%20project.', '_blank')}>
+                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={() => window.location.href = 'mailto:devhelp.agency@gmail.com?subject=Project Inquiry'}>
                     <Mail className="w-4 h-4 mr-3 text-primary" />
                     {t('contact.actions.email')}
                   </Button>
@@ -206,7 +206,7 @@ export const ContactSection = () => {
                 <p className="text-sm opacity-90 mb-4">
                   {t('contact.ready.subtitle')}
                 </p>
-                <Button variant="secondary" className="bg-white text-black hover:bg-gray-100 smooth-transition font-semibold" onClick={() => window.open("https://wa.me/212726551805?text=Hi!%20I'm%20ready%20to%20accelerate%20my%20growth.", '_blank')}>
+                <Button variant="secondary" className="bg-white text-black hover:bg-gray-100 smooth-transition font-semibold" onClick={() => window.location.href = "mailto:devhelp.agency@gmail.com?subject=Let's Start Today"}>
                   {t('contact.ready.button')}
                 </Button>
               </div>
