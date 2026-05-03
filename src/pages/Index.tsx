@@ -66,6 +66,16 @@ const Index = () => {
           background: "radial-gradient(circle, hsl(var(--brand-orange) / 0.5) 0%, transparent 70%)",
         }}
       />
+      <motion.div
+        className="pointer-events-none fixed top-0 left-0 w-[600px] h-[600px] rounded-full dark:mix-blend-screen z-0 opacity-30 dark:opacity-20 hidden md:block"
+        style={{
+          x: springX,
+          y: springY,
+          translateX: "-30%",
+          translateY: "-30%",
+          background: "radial-gradient(circle, hsl(var(--brand-blue) / 0.4) 0%, transparent 70%)",
+        }}
+      />
       
       <Header isDark={isDark} toggleDarkMode={toggleDarkMode} />
       <main>

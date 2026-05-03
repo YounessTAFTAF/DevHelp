@@ -61,7 +61,7 @@ export const PacksSection = () => {
             </CardContent>
             <CardFooter className="pt-8">
               <Button 
-                onClick={() => window.open('https://wa.me/212660064287?text=Hi!%20I%20am%20interested%20in%20the%20BUSINESS%20PACK.', '_blank')}
+                onClick={() => window.open('https://wa.me/212726551805?text=Hi!%20I%20am%20interested%20in%20the%20BUSINESS%20PACK.', '_blank')}
                 className="w-full bg-secondary text-foreground hover:bg-primary hover:text-primary-foreground smooth-transition font-semibold py-6"
               >
                 <Calendar className="w-4 h-4 mr-2" />
@@ -106,7 +106,7 @@ export const PacksSection = () => {
             </CardContent>
             <CardFooter className="pt-8">
               <Button 
-                onClick={() => window.open('https://wa.me/212660064287?text=Hi!%20I%20am%20interested%20in%20the%20PACK%20PREMIUM.', '_blank')}
+                onClick={() => window.open('https://wa.me/212726551805?text=Hi!%20I%20am%20interested%20in%20the%20PACK%20PREMIUM.', '_blank')}
                 className="w-full bg-gradient-primary hover:opacity-90 smooth-transition font-semibold py-6 text-primary-foreground border-0 shadow-glow"
               >
                 <Calendar className="w-4 h-4 mr-2" />

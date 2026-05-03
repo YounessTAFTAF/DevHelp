@@ -145,7 +145,7 @@ export const ContactSection = () => {
                     <Phone className="w-5 h-5 text-primary mr-3" />
                     <div>
                       <div className="font-medium">{t('contact.info.phone')}</div>
-                      <a href="https://wa.me/212660064287" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">+212 660-064287</a>
+                      <a href="https://wa.me/212726551805" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">+212 726-551805</a>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -164,11 +164,11 @@ export const ContactSection = () => {
                   <CardTitle className="text-xl font-bold">{t('contact.quickActions')}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={() => window.open('https://wa.me/212660064287?text=Hi!%20I%20would%20like%20to%20book%20a%20discovery%20call.', '_blank')}>
-                    <Calendar className="w-4 h-4 mr-3" />
+                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={() => window.open('https://wa.me/212726551805?text=Hi!%20I%20would%20like%20to%20book%20a%20discovery%20call.', '_blank')}>
+                    <Calendar className="w-4 h-4 mr-3 text-primary" />
                     {t('contact.actions.book')}
                   </Button>
-                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={() => window.open('https://wa.me/212660064287', '_blank')}>
+                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={() => window.open('https://wa.me/212726551805', '_blank')}>
                     <Phone className="w-4 h-4 mr-3" />
                     {t('contact.actions.call')}
                   </Button>

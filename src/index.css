@@ -40,13 +40,15 @@
     
     /* Custom DevHelp Variables */
     --brand-orange: 20 94% 53%;
+    --brand-blue: 228 77% 41%;
     --brand-black: 0 0% 0%;
     --brand-white: 0 0% 100%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(20 94% 65%));
+    --gradient-blue: linear-gradient(135deg, hsl(var(--brand-blue)), hsl(228 77% 55%));
     --gradient-dark: linear-gradient(135deg, hsl(var(--brand-black)), hsl(0 0% 15%));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-black) / 0.9), hsl(var(--brand-orange) / 0.1));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-black) / 0.9), hsl(var(--brand-blue) / 0.1));
     
     /* Shadows */
     --shadow-glow: 0 0 40px hsl(var(--brand-orange) / 0.3);
@@ -164,16 +166,16 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--brand-orange) / 0.5);
+  background: hsl(var(--brand-blue) / 0.5);
   border-radius: 10px;
   border: 2px solid hsl(var(--background));
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--brand-orange));
+  background: hsl(var(--brand-blue));
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: hsl(var(--brand-orange) / 0.5) hsl(var(--background));
+  scrollbar-color: hsl(var(--brand-blue) / 0.5) hsl(var(--background));
 }
