@@ -32,7 +32,7 @@ export const ContactSection = () => {
 *Details:* ${formData.message}`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/212726551805?text=${encodedMessage}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=212726551805&text=${encodedMessage}`;
     
     window.open(whatsappUrl, '_blank');
 
@@ -185,7 +185,7 @@ export const ContactSection = () => {
                   <CardTitle className="text-xl font-bold">{t('contact.quickActions')}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={() => window.open('https://wa.me/212726551805?text=Hi!%20I%20would%20like%20to%20book%20a%20discovery%20call.', '_blank')}>
+                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={() => window.open('https://api.whatsapp.com/send?phone=212726551805&text=Hi!%20I%20would%20like%20to%20book%20a%20discovery%20call.', '_blank')}>
                     <Calendar className="w-4 h-4 mr-3 text-primary" />
                     {t('contact.actions.book')}
                   </Button>
