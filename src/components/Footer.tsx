@@ -32,7 +32,7 @@ export const Footer = () => {
               </div>
               <div className="flex items-center text-sm">
                 <Phone className="w-4 h-4 mr-2 text-primary" />
-                <a href="https://wa.me/212726551805" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">+212 726-551805</a>
+                <a href="https://api.whatsapp.com/send?phone=212726551805" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">+212 726-551805</a>
               </div>
               <div className="flex items-center text-sm">
                 <Instagram className="w-4 h-4 mr-2 text-primary" />

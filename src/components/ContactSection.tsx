@@ -159,7 +159,7 @@ export const ContactSection = () => {
                     <Phone className="w-5 h-5 text-primary mr-3" />
                     <div>
                       <div className="font-medium">{t('contact.info.phone')}</div>
-                      <a href="https://wa.me/212726551805" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">+212 726-551805</a>
+                      <a href="https://api.whatsapp.com/send?phone=212726551805" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">+212 726-551805</a>
                     </div>
                   </div>
                   <div className="flex items-center">
