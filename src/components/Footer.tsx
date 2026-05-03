@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram } from "lucide-react";
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
   const scrollToSection = (sectionId: string) => {
@@ -33,6 +33,10 @@ export const Footer = () => {
               <div className="flex items-center text-sm">
                 <Phone className="w-4 h-4 mr-2 text-primary" />
                 <a href="https://wa.me/212726551805" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">+212 726-551805</a>
+              </div>
+              <div className="flex items-center text-sm">
+                <Instagram className="w-4 h-4 mr-2 text-primary" />
+                <a href="https://instagram.com/devhelpagency" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">@devhelpagency</a>
               </div>
             </div>
           </div>

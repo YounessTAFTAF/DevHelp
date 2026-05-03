@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Phone, Send, Calendar, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, Send, Calendar, MapPin, Clock, Instagram } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 export const ContactSection = () => {
@@ -146,6 +146,13 @@ export const ContactSection = () => {
                     <div>
                       <div className="font-medium">{t('contact.info.phone')}</div>
                       <a href="https://wa.me/212726551805" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">+212 726-551805</a>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <Instagram className="w-5 h-5 text-primary mr-3" />
+                    <div>
+                      <div className="font-medium">Instagram</div>
+                      <a href="https://instagram.com/devhelpagency" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">@devhelpagency</a>
                     </div>
                   </div>
                   <div className="flex items-center">
