@@ -22,11 +22,25 @@ export const ContactSection = () => {
   });
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
+    
+    // Construct WhatsApp message
+    const message = `Hi DevHelp! I'm interested in starting a project.
+    
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Project Type:* ${formData.budget}
+*Details:* ${formData.message}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/212726551805?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
+
     toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours to discuss your project."
+      title: "Redirecting to WhatsApp...",
+      description: "Let's discuss your project on WhatsApp!"
     });
+
     setFormData({
       name: '',
       email: '',
@@ -136,7 +150,7 @@ export const ContactSection = () => {
                     <Mail className="w-5 h-5 text-primary mr-3" />
                     <div>
                       <div className="font-medium">{t('contact.info.email')}</div>
-                      <a href="mailto:devhelp.agency@gmail.com" className="text-muted-foreground hover:text-primary smooth-transition">
+                      <a href="https://wa.me/212726551805" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">
                         devhelp.agency@gmail.com
                       </a>
                     </div>
@@ -179,8 +193,8 @@ export const ContactSection = () => {
                     <Phone className="w-4 h-4 mr-3" />
                     {t('contact.actions.call')}
                   </Button>
-                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={() => window.location.href = 'mailto:devhelp.agency@gmail.com?subject=Project Inquiry'}>
-                    <Mail className="w-4 h-4 mr-3" />
+                  <Button variant="outline" className="w-full justify-start border-primary/20 hover:bg-primary/5 smooth-transition" onClick={() => window.open('https://wa.me/212726551805?text=Hi!%20I%20have%20a%20question%20about%20a%20project.', '_blank')}>
+                    <Mail className="w-4 h-4 mr-3 text-primary" />
                     {t('contact.actions.email')}
                   </Button>
                 </CardContent>
@@ -192,7 +206,7 @@ export const ContactSection = () => {
                 <p className="text-sm opacity-90 mb-4">
                   {t('contact.ready.subtitle')}
                 </p>
-                <Button variant="secondary" className="bg-white text-black hover:bg-gray-100 smooth-transition font-semibold" onClick={() => window.location.href = "mailto:devhelp.agency@gmail.com?subject=Let's Accelerate Growth"}>
+                <Button variant="secondary" className="bg-white text-black hover:bg-gray-100 smooth-transition font-semibold" onClick={() => window.open("https://wa.me/212726551805?text=Hi!%20I'm%20ready%20to%20accelerate%20my%20growth.", '_blank')}>
                   {t('contact.ready.button')}
                 </Button>
               </div>
