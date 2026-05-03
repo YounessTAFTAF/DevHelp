@@ -78,6 +78,7 @@ export default {
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
+				'glow-blue': 'var(--shadow-glow-blue)',
 				'elevation': 'var(--shadow-elevation)'
 			},
 			transitionTimingFunction: {

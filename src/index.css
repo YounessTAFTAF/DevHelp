@@ -52,6 +52,7 @@
     
     /* Shadows */
     --shadow-glow: 0 0 40px hsl(var(--brand-orange) / 0.3);
+    --shadow-glow-blue: 0 0 40px hsl(var(--brand-blue) / 0.3);
     --shadow-elevation: 0 10px 30px -10px hsl(var(--brand-black) / 0.1);
     
     /* Animations */
@@ -144,14 +145,20 @@
   .light-mode-card-glow {
     box-shadow: 0 10px 25px -5px hsl(var(--brand-orange) / 0.2);
   }
-  .dark .light-mode-card-glow {
-    box-shadow: none; /* Assuming they only want this in light mode or they already have dark mode styles */
+  .light-mode-card-glow-blue {
+    box-shadow: 0 10px 25px -5px hsl(var(--brand-blue) / 0.2);
+  }
+  .dark .light-mode-card-glow, .dark .light-mode-card-glow-blue {
+    box-shadow: none; 
   }
 
   .light-mode-title-glow {
     text-shadow: 0 4px 10px hsl(var(--brand-orange) / 0.3);
   }
-  .dark .light-mode-title-glow {
+  .light-mode-title-glow-blue {
+    text-shadow: 0 4px 10px hsl(var(--brand-blue) / 0.3);
+  }
+  .dark .light-mode-title-glow, .dark .light-mode-title-glow-blue {
     text-shadow: none;
   }
 }
