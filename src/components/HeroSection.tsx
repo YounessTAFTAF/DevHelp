@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Zap, Rocket } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { BrowserMockup } from "./BrowserMockup";
 
 export const HeroSection = () => {
   const { t } = useLanguage();
@@ -89,9 +88,6 @@ export const HeroSection = () => {
               {t('hero.cta2')}
             </Button>
           </motion.div>
-
-          {/* New Browser Mockup (Identity) */}
-          <BrowserMockup />
 
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
