@@ -26,8 +26,8 @@ export const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center text-sm">
                 <Mail className="w-4 h-4 mr-2 text-primary" />
-                <a href="mailto:devhelpagency.it@gmail.com" className="text-muted-foreground hover:text-primary smooth-transition">
-                  devhelpagency.it@gmail.com
+                <a href="mailto:devhelp.agency@gmail.com" className="text-muted-foreground hover:text-primary smooth-transition">
+                  devhelp.agency@gmail.com
                 </a>
               </div>
               <div className="flex items-center text-sm">
