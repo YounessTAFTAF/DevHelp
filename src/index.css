@@ -40,19 +40,16 @@
     
     /* Custom DevHelp Variables */
     --brand-orange: 20 94% 53%;
-    --brand-blue: 228 77% 41%;
     --brand-black: 0 0% 0%;
     --brand-white: 0 0% 100%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(20 94% 65%));
-    --gradient-blue: linear-gradient(135deg, hsl(var(--brand-blue)), hsl(228 77% 55%));
     --gradient-dark: linear-gradient(135deg, hsl(var(--brand-black)), hsl(0 0% 15%));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-black) / 0.9), hsl(var(--brand-blue) / 0.1));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-black) / 0.9), hsl(var(--brand-orange) / 0.1));
     
     /* Shadows */
     --shadow-glow: 0 0 40px hsl(var(--brand-orange) / 0.3);
-    --shadow-glow-blue: 0 0 40px hsl(var(--brand-blue) / 0.3);
     --shadow-elevation: 0 10px 30px -10px hsl(var(--brand-black) / 0.1);
     
     /* Animations */
@@ -145,20 +142,14 @@
   .light-mode-card-glow {
     box-shadow: 0 10px 25px -5px hsl(var(--brand-orange) / 0.2);
   }
-  .light-mode-card-glow-blue {
-    box-shadow: 0 10px 25px -5px hsl(var(--brand-blue) / 0.2);
-  }
-  .dark .light-mode-card-glow, .dark .light-mode-card-glow-blue {
+  .dark .light-mode-card-glow {
     box-shadow: none; 
   }
 
   .light-mode-title-glow {
     text-shadow: 0 4px 10px hsl(var(--brand-orange) / 0.3);
   }
-  .light-mode-title-glow-blue {
-    text-shadow: 0 4px 10px hsl(var(--brand-blue) / 0.3);
-  }
-  .dark .light-mode-title-glow, .dark .light-mode-title-glow-blue {
+  .dark .light-mode-title-glow {
     text-shadow: none;
   }
 }
@@ -173,16 +164,16 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--brand-blue) / 0.5);
+  background: hsl(var(--brand-orange) / 0.5);
   border-radius: 10px;
   border: 2px solid hsl(var(--background));
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--brand-blue));
+  background: hsl(var(--brand-orange));
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: hsl(var(--brand-blue) / 0.5) hsl(var(--background));
+  scrollbar-color: hsl(var(--brand-orange) / 0.5) hsl(var(--background));
 }

@@ -51,7 +51,7 @@ export const HeroSection = () => {
           >
             {t('hero.title1')} <span className="text-primary">{t('hero.title2')}</span> —
             <br />
-            {t('hero.title3')} <span className="bg-gradient-blue bg-clip-text text-transparent">{t('hero.title4')}</span>
+            {t('hero.title3')} <span className="bg-gradient-primary bg-clip-text text-transparent">{t('hero.title4')}</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -83,7 +83,7 @@ export const HeroSection = () => {
               onClick={scrollToContact}
               variant="outline"
               size="lg"
-              className="border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white smooth-transition font-semibold text-lg px-8 py-6 rounded-full"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground smooth-transition font-semibold text-lg px-8 py-6 rounded-full"
             >
               {t('hero.cta2')}
             </Button>

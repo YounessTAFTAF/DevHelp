@@ -67,7 +67,6 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				'brand-orange': 'hsl(var(--brand-orange))',
-				'brand-blue': 'hsl(var(--brand-blue))',
 				'brand-black': 'hsl(var(--brand-black))',
 				'brand-white': 'hsl(var(--brand-white))'
 			},
@@ -78,7 +77,6 @@ export default {
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
-				'glow-blue': 'var(--shadow-glow-blue)',
 				'elevation': 'var(--shadow-elevation)'
 			},
 			transitionTimingFunction: {

@@ -49,13 +49,13 @@ export const Header = ({ isDark, toggleDarkMode }: HeaderProps) => {
           <nav className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-brand-blue smooth-transition font-medium"
+              className="text-foreground hover:text-primary smooth-transition font-medium"
             >
               {t('nav.about')}
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-brand-blue smooth-transition font-medium"
+              className="text-foreground hover:text-primary smooth-transition font-medium"
             >
               {t('nav.services')}
             </button>
@@ -114,7 +114,7 @@ export const Header = ({ isDark, toggleDarkMode }: HeaderProps) => {
             </Button>
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-gradient-blue hover:shadow-glow-blue smooth-transition font-semibold text-white border-0"
+              className="bg-gradient-primary hover:shadow-glow smooth-transition font-semibold"
             >
               {t('nav.bookCall')}
             </Button>

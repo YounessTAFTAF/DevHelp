@@ -114,7 +114,7 @@ export const ResultsSection = () => {
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 light-mode-title-glow">
               {t('results.title1')}
               <br />
-              <span className="text-brand-blue">{t('results.title2')}</span>
+              <span className="text-primary">{t('results.title2')}</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               {t('results.subtitle')}
@@ -133,16 +133,16 @@ export const ResultsSection = () => {
                 className="flex h-full will-change-transform"
               >
               <Card 
-                className={`w-full text-center group hover:shadow-elevation smooth-transition border-border/50 ${index % 2 === 0 ? 'hover:border-primary/20 bg-card/95 light-mode-card-glow' : 'hover:border-brand-blue/20 bg-card/95 light-mode-card-glow-blue'}`}
+                className="w-full text-center group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/95 light-mode-card-glow"
               >
                 <CardContent className="p-6 flex flex-col justify-between h-full">
                   <div>
                     <div className="mb-4 flex justify-center">
-                      <div className={`w-12 h-12 ${index % 2 === 0 ? 'bg-primary/10 group-hover:bg-primary/20' : 'bg-brand-blue/10 group-hover:bg-brand-blue/20'} rounded-full flex items-center justify-center smooth-transition`}>
-                        <stat.icon className={`w-6 h-6 ${index % 2 === 0 ? 'text-primary' : 'text-brand-blue'}`} />
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 smooth-transition">
+                        <stat.icon className="w-6 h-6 text-primary" />
                       </div>
                     </div>
-                    <div className={`text-3xl font-bold ${index % 2 === 0 ? 'text-primary' : 'text-brand-blue'} mb-2`}>
+                    <div className="text-3xl font-bold text-primary mb-2">
                       <AnimatedCounter value={stat.number} />
                     </div>
                     <div className="font-semibold mb-2">{stat.label}</div>
@@ -176,7 +176,7 @@ export const ResultsSection = () => {
                   className="flex h-full will-change-transform"
                 >
                 <Card 
-                  className={`w-full group hover:shadow-elevation smooth-transition border-border/50 ${index % 2 === 1 ? 'hover:border-primary/20 bg-card/95 light-mode-card-glow' : 'hover:border-brand-blue/20 bg-card/95 light-mode-card-glow-blue'}`}
+                  className="w-full group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/95 light-mode-card-glow"
                 >
                   <CardContent className="p-6">
                     <div className="mb-4">
@@ -185,7 +185,7 @@ export const ResultsSection = () => {
                       </span>
                       <h4 className="font-bold text-lg mb-2">{study.title}</h4>
                       <div className="text-sm text-muted-foreground mb-2">{study.client}</div>
-                      <div className={`text-xl font-bold ${index % 2 === 1 ? 'text-primary' : 'text-brand-blue'} mb-4`}>{study.result}</div>
+                      <div className="text-xl font-bold text-primary mb-4">{study.result}</div>
                     </div>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                       {study.description}

@@ -41,10 +41,10 @@ export const AboutSection = () => {
             transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 20 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 light-mode-title-glow-blue">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 light-mode-title-glow">
               {t('about.title1')}
               <br />
-              <span className="text-brand-blue">{t('about.title2')}</span>
+              <span className="text-primary">{t('about.title2')}</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               {t('about.subtitle')}
@@ -63,16 +63,16 @@ export const AboutSection = () => {
                 className="flex h-full will-change-transform"
               >
               <Card 
-                className={`w-full group hover:shadow-elevation smooth-transition border-border/50 ${index % 2 === 0 ? 'hover:border-primary/20 bg-card/95 light-mode-card-glow' : 'hover:border-brand-blue/20 bg-card/95 light-mode-card-glow-blue'}`}
+                className="w-full group hover:shadow-elevation smooth-transition border-border/50 hover:border-primary/20 bg-card/95 light-mode-card-glow"
               >
                 <CardContent className="p-6 text-center h-full flex flex-col justify-between">
                   <div>
                     <div className="mb-4 flex justify-center">
-                      <div className={`w-12 h-12 ${index % 2 === 0 ? 'bg-primary/10 group-hover:bg-primary/20' : 'bg-brand-blue/10 group-hover:bg-brand-blue/20'} rounded-full flex items-center justify-center smooth-transition`}>
-                        <feature.icon className={`w-6 h-6 ${index % 2 === 0 ? 'text-primary' : 'text-brand-blue'}`} />
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 smooth-transition">
+                        <feature.icon className="w-6 h-6 text-primary" />
                       </div>
                     </div>
-                    <h3 className={`font-semibold text-lg mb-3 ${index % 2 === 1 ? 'group-hover:text-brand-blue' : 'group-hover:text-primary'} smooth-transition`}>{feature.title}</h3>
+                    <h3 className="font-semibold text-lg mb-3 group-hover:text-primary smooth-transition">{feature.title}</h3>
                   </div>
                   <p className="text-muted-foreground text-sm leading-relaxed mt-2">{feature.description}</p>
                 </CardContent>
@@ -91,7 +91,7 @@ export const AboutSection = () => {
           >
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-brand-blue light-mode-title-glow-blue">
+                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-primary light-mode-title-glow">
                   {t('about.story.title')}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">

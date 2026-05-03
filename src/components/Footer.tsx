@@ -25,14 +25,14 @@ export const Footer = () => {
             </p>
             <div className="space-y-2">
               <div className="flex items-center text-sm">
-                <Mail className="w-4 h-4 mr-2 text-brand-blue" />
-                <a href="mailto:devhelpagency.it@gmail.com" className="text-muted-foreground hover:text-brand-blue smooth-transition">
+                <Mail className="w-4 h-4 mr-2 text-primary" />
+                <a href="mailto:devhelpagency.it@gmail.com" className="text-muted-foreground hover:text-primary smooth-transition">
                   devhelpagency.it@gmail.com
                 </a>
               </div>
               <div className="flex items-center text-sm">
-                <Phone className="w-4 h-4 mr-2 text-brand-blue" />
-                <a href="https://wa.me/212726551805" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-brand-blue smooth-transition">+212 726-551805</a>
+                <Phone className="w-4 h-4 mr-2 text-primary" />
+                <a href="https://wa.me/212726551805" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary smooth-transition">+212 726-551805</a>
               </div>
             </div>
           </div>
@@ -42,27 +42,27 @@ export const Footer = () => {
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <button onClick={() => scrollToSection('about')} className="text-muted-foreground hover:text-brand-blue smooth-transition text-sm">
+                <button onClick={() => scrollToSection('about')} className="text-muted-foreground hover:text-primary smooth-transition text-sm">
                   About DevHelp
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('services')} className="text-muted-foreground hover:text-brand-blue smooth-transition text-sm">
+                <button onClick={() => scrollToSection('services')} className="text-muted-foreground hover:text-primary smooth-transition text-sm">
                   Our Services
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('results')} className="text-muted-foreground hover:text-brand-blue smooth-transition text-sm">
+                <button onClick={() => scrollToSection('results')} className="text-muted-foreground hover:text-primary smooth-transition text-sm">
                   Success Stories
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('packs')} className="text-muted-foreground hover:text-brand-blue smooth-transition text-sm">
+                <button onClick={() => scrollToSection('packs')} className="text-muted-foreground hover:text-primary smooth-transition text-sm">
                   The Packs
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('contact')} className="text-muted-foreground hover:text-brand-blue smooth-transition text-sm">
+                <button onClick={() => scrollToSection('contact')} className="text-muted-foreground hover:text-primary smooth-transition text-sm">
                   Contact Us
                 </button>
               </li>
@@ -99,13 +99,13 @@ export const Footer = () => {
               © {currentYear} DevHelp. All rights reserved.
             </div>
             <div className="flex items-center space-x-6 text-sm">
-              <button onClick={() => scrollToSection('contact')} className="text-muted-foreground hover:text-brand-blue smooth-transition">
+              <button onClick={() => scrollToSection('contact')} className="text-muted-foreground hover:text-primary smooth-transition">
                 Privacy Policy
               </button>
-              <button onClick={() => scrollToSection('contact')} className="text-muted-foreground hover:text-brand-blue smooth-transition">
+              <button onClick={() => scrollToSection('contact')} className="text-muted-foreground hover:text-primary smooth-transition">
                 Terms of Service
               </button>
-              <span className="text-brand-blue font-medium">Growth Accelerator</span>
+              <span className="text-primary font-medium">Growth Accelerator</span>
             </div>
           </div>
         </div>
